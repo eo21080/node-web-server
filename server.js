@@ -16,7 +16,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about',(req, res) => {
-  res.send('about page');
+  res.send('about page!!!');
+});
+
+app.get('/about2',(req, res) => {
+  res.send('about2 page');
 });
 
 // bad - send back json with errorMassage
@@ -25,6 +29,8 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Unable to handle request'
   });
 });
+
+
 app.listen(port, () => {
-  console.log('Server is up on port ${port}');
+  console.log('Server is up on port heroku or 3000');
 });
